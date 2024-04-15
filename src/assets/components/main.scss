@@ -3,6 +3,8 @@
 .main {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    padding-top: 10px;
 }
 
 .main-info {
@@ -16,6 +18,9 @@
 
 .main-list__wrapper {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 
@@ -35,5 +40,48 @@
 
     &:hover {
         background: rgb(36, 49, 70);
+    }
+}
+
+
+.main-list {
+    margin-top: 10px;
+    // background: tomato;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    height: 500px;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+.main-menu {
+    display: flex;
+
+
+    &__link {
+        width: 33.3%;
+        background: #000;
+        text-align: center;
+        background: rgb(25, 38, 61);
+        color: #fff;
+        padding: 15px;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            border-right: 1px solid #ebebeb;
+        }
+
+        &:hover {
+            background: rgb(36, 49, 70);
+        }
+
+        &:first-child {
+            border-top-left-radius: 5px;
+        }
+        &:last-child {
+            border-top-right-radius: 5px;
+        }
     }
 }
