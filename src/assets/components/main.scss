@@ -1,0 +1,39 @@
+@import '_reset';
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-size: 23px;
+    }
+}
+
+.main-list__wrapper {
+    margin-top: 20px;
+}
+
+
+.main-list-question {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(25, 38, 61);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: .3s all;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &:hover {
+        background: rgb(36, 49, 70);
+    }
+}
