@@ -1,23 +1,34 @@
+import { useState } from 'react';
 import QuestionList from '../components/QuestionList';
 import Menu from '../components/ui/Menu';
 
 export const Main = () => {
+  const [coins, setCoins] = useState(0);
+
+  const incrementCoin = () => {
+    setCoins(prev => prev + 1);
+  }
+
   return (
     <div className='wrapper'>
       <div className='main'>
         
         <div className='main-content'>
           <div className='main-info'>
-            <h1>Здравствуйте, Магомед.</h1>
-            <p>
-              Здесь вы можете выполнять задания в телеграм и получать за это
-              деньги.
-            </p>
+            <div className="main-info-squad">
+              <span>You aren't in any team</span>
+              <span>Join</span>
+            </div>
 
-            <span>Ваш баланс: 500р.</span>
+            <div className='main-info-coins'>SOON: { coins }</div>
           </div>
 
-          <QuestionList/>
+          <div className="coin__wrapper">
+            <div className="coin" onClick={incrementCoin}>
+              <img src="/coin.svg" alt="coin" />
+            </div>
+          </div>
+          {/* <QuestionList/> */}
         </div>
 
         <Menu />
