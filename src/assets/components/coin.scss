@@ -4,10 +4,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .3s linear;
+    background: url('/coin.svg') no-repeat center/cover;
+    width: 280px;
+    height: 280px;
+    transform: rotate(90deg);
+    
 
     &__wrapper {
         // background: red;
         margin-top: 60px;
+        display: flex;
+        justify-content: center;
     }
 
     img {
@@ -16,5 +24,38 @@
         transform: rotate(90deg);
         // border: 10px solid rgb(131, 126, 126);
         // box-shadow: 5px 5px 5px 0px rgba(99, 81, 81, 0.75);
+        user-select: none;
+    }
+}
+
+.coin-timer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__wrapper {
+        display: flex;
+        padding: 0 15px;
+        margin-top: auto;
+        margin-bottom: 10px;
+    }
+
+    &-box {
+        height: 5px;
+        background: #ebebeb;
+        flex-grow: 1;
+    }
+
+    &__line {
+        width: 0;
+        height: 5px;
+        background: green;
+        flex-grow: 1;
+    }
+    
+    &__count {
+        width: 60px;
+        text-align: right;
     }
 }
