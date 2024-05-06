@@ -1,0 +1,20 @@
+.coin {
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__wrapper {
+        // background: red;
+        margin-top: 60px;
+    }
+
+    img {
+        border-radius: 50%;
+        width: 80%;
+        transform: rotate(90deg);
+        // border: 10px solid rgb(131, 126, 126);
+        // box-shadow: 5px 5px 5px 0px rgba(99, 81, 81, 0.75);
+    }
+}
